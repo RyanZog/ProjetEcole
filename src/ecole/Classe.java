@@ -198,7 +198,7 @@ public class Classe {
      * @return place dispo ou pas
      */
     public boolean capacity(Salle salle){
-        if(nbreEleves>=salle.getCapacite()){
+        if(nbreEleves>salle.getCapacite()){
             return false;
         }
         return true;
@@ -212,7 +212,7 @@ public class Classe {
      */
     public boolean addCours(Cours ue,Infos inf){
         for(Infos i: info){
-            //TODO verifier pas deja present
+            //verifier pas deja present
             if(i.getUe().equals(inf.getUe()) && (i.getNbreHeures() == (inf.getNbreHeures())) ){
                 return false;
             }
