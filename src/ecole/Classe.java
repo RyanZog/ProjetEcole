@@ -173,7 +173,6 @@ public class Classe {
     public List<EnsHeure> listEnseigantHeures(){
         List<EnsHeure> leh =new ArrayList<>();
         for(Infos inf : info){
-            //TODO verifier unicite1
             leh.add(new EnsHeure(inf.getPr(),inf.getNbreHeures()) );
         }
         return leh;
